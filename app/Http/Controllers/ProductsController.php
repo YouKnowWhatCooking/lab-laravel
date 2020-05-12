@@ -11,6 +11,7 @@ class ProductsController extends Controller
      public function index()
    {
 	   if (Cache::has('products') {
+			$products = Cache::get('products');
 			return view ('products.index', compact('products'));
 	   } else {
 		   $products = Product::all();

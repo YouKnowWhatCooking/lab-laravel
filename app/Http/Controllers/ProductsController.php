@@ -15,8 +15,8 @@ class ProductsController extends Controller
 	   } else {
 		   $products = Product::all();
 		   Cache::set('products', $products);
-       return view('products.index', compact('products'));
 	   }
+	   return view('products.index', compact('products'));
    }
 
 

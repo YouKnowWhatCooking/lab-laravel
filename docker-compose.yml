@@ -29,3 +29,9 @@ services:
     environment:
       MYSQL_DATABASE: lab_laravel
       MYSQL_ROOT_PASSWORD: root   
+      
+  memcached:
+    image: memcached
+    container_name: base-memcached
+    ports:
+      - 11111:11111   
